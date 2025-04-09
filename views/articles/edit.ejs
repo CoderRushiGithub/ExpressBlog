@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Article</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/edit.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Edit Article</h1>
+
+    <form action="/articles/<%= article.id %>?_method=PUT" method="POST">
+      <input type="text" name="title" value="<%= article.title %>" required>
+      <textarea name="description" required><%= article.description %></textarea>
+      <textarea name="markdown" required><%= article.markdown %></textarea>
+      <button type="submit">Update</button>
+    </form>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/show.css">
+     
+</head>
+<body>
+    <div class="container mt-4">
+        <h1><%= article.title %></h1>
+        <p class="text-muted">Published on <%= article.createdAt.toDateString() %></p>
+
+        <h4>Description</h4>
+        <p><%= article.description %></p>
+
+        <h4>Content</h4>
+        <div><%= article.markdown %></div>
+
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>
